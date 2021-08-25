@@ -1,0 +1,220 @@
+@media (max-width: 1000px){
+
+    .title-text{
+        width: 50%;
+    }
+    .about-content{
+        width: 75%;
+    }
+    .delivery-div{
+        display: block;
+    }
+    .delivery-cont{
+        margin: 5% 1.5%;
+        padding: 15%;
+    }
+    .delivery-cont p{
+        font-size: 1rem;
+    }
+    .delivery-cont h3{
+        padding: 2%;
+    }
+    .variety-cont{
+        margin: 0.4%;
+        height: 100px;
+        width: 20%;
+    }
+    .copytext p{
+        font-size: .3rem;
+    }
+
+    /* GALLERY */
+    .category-cont div{
+        font-size: 1rem;
+    }
+    .category-cont div:hover{
+        font-size: 1.2rem;
+    }
+    .gallery-section{
+        margin-bottom: 7%;
+    }
+    .gal h5{
+        width: 70%;
+    }
+    .gal h4{
+        font-size: .85rem;
+    }
+
+
+@media (max-width: 449px){
+    #Nav-section{
+        padding: 4%;
+        }
+    .navigation-bar{
+        display: block;
+    }
+    .burger{
+        display: block;
+    }
+    .nav-list{
+        display: none;
+        font-size: 0.75rem;
+    }
+    .nav-item img{
+        width: 50px;
+        height: 50px;
+    }
+    .navbrand li {
+        font-size: .85rem;
+    }
+    .second-section-text h3{
+        font-size: .7rem;
+        padding: 1%;
+    }
+    .welcome{
+        padding: 100px 0%;
+    }
+    .welcome h1{
+        font-size: 1.5rem;
+    }
+    .welcome span{
+        font-size: 4rem;
+    }
+    .title-text{
+        width: 70%;
+        margin: 80px auto;
+        padding: 10%;
+    }
+    .title-text h1{
+        font-size: 1.5rem;
+    }
+    .title-text-h2-1, .title-text-h2-2{
+        font-size: .5rem;
+    }
+    .title-text h4{
+        font-size: .75rem;
+    }
+    #slider-section{
+        display: none;
+    }
+    #slider-section2{
+        display: block;
+    }
+    .div-cont{
+        margin: 5% 0;
+    }
+    .about-content h2{
+        text-align: center;
+    }
+    .about-content p{
+        font-size: .75rem;
+        text-align: justify;
+    }
+    .about-content img{
+        width: 100px;
+        height: 100px;
+    }
+    .delivery-section{
+        margin: 50px 0;
+    }
+    .delivery-section h2{
+        font-size: 1.5rem;
+        margin: 10px;
+        padding: 4%;
+    }
+    .delivery-div{
+        display: block;
+    }
+    .delivery-cont{
+      margin-bottom: 3%;
+    }
+    .delivery-cont h3{
+        margin: 9%;
+        font-size: 1.2rem;
+    }
+    .footer-cont{
+        display: block;
+        padding: 4%;
+    }
+    .footer-cont div{
+        margin: 7% 0;
+    }
+    .delivery-div{
+        width: 85%;
+        margin: 6% auto;
+    }
+    .delivery-cont{
+        padding: 20% 10%;
+        margin: 15% 0;
+    }
+    .variety-section{
+        background-color: #290001;
+        padding: 7% 5%;
+    }
+    .variety-section h1{
+        color:#ffbd08;
+       font-size: 2rem;
+    }
+    .variety{
+        display: block;
+    }
+    .variety-cont{
+        margin: 8% auto;
+        height: 200px;
+        width: 80%;
+    }
+     .order{
+        background-color:#ffbd08;
+        color: #290001 ;
+        width: 40%;
+        font-size: .75rem;
+        padding: 3%;
+     }
+    .copyright p{
+        font-size: .725rem;
+    }
+    .copyright{
+        padding: 2% 4%;
+    }
+    .social-media img{
+        width: 20px;
+        height: 20px;
+    }
+     /* GALLERY */
+     .category h1{
+        font-size: 1.5rem;
+    }
+    .sect-1{
+        display: block;
+    }
+     .category-cont div{
+        font-size: .65rem;
+        padding: 3% 1%;
+    }
+    .gal{
+        margin-bottom: 100px;
+    }
+    .category-cont div:hover{
+        font-size: .7rem;
+    }
+    .gallery-section{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .gal h5{
+        width: 50%;
+    }
+    .gal h4{
+        font-size: .85rem;
+    }
+    .testimonial{
+        height: 600px;
+    }
+    .test-flex{
+        display: block;
+        margin: 10% 0;
+    }
+    .text-flex-cont{
+        margin: 10% 8%;
+    }
+}
