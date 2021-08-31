@@ -7,11 +7,12 @@ h1{
     font-family: 'Arvo', serif;
 }
 h2{
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Padauk', sans-serif;
 }
 p{
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     line-height: 2.0;
+    font-family: 'Padauk', sans-serif;
 }
 li {
 
@@ -117,6 +118,13 @@ text-transform: uppercase;
   .title-text-h2-2{
     background-color: #ffe05d;
     color: #290001;
+    cursor: pointer;
+    transition: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: .6s;
+  }
+  .title-text-h2-2:hover{    
+    background-color: #796303;
   }
   .title-text h4{
       margin-top: 7%;
@@ -186,7 +194,14 @@ text-transform: uppercase;
       padding: 2%;
       width: 40%;
       margin: 0 auto;
+      cursor: pointer;
+      transition: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: .6s;
   }
+  .cont-contents h4:hover{
+    color: yellow;
+}
   .cover2{
     width: 100%;
     height: 100%;
@@ -229,11 +244,10 @@ text-transform: uppercase;
       padding: 4%;
   }
   .about-content p{
-      margin: 10px;
+      margin: 15px;
       font-size: 1.2rem;
       color: #fff;
       font-weight: lighter;
-      line-height: 1.5;
   }
   .logo-carrier{
       text-align: center;
@@ -264,6 +278,7 @@ text-transform: uppercase;
   .delivery-cont{
       text-align: center;
       margin: 3%;
+      border-radius: 10px;
       background-color: rgb(247, 247, 247);
       padding: 4%;
   }
@@ -280,7 +295,7 @@ text-transform: uppercase;
       color: #290001;
   }
   .footer-section{
-    background-color: #584104; 
+    background-color: #290001;
   }
   .footer-cont{
       display: flex;
@@ -343,6 +358,7 @@ text-transform: uppercase;
   }
   .footer-cont div h3{
       margin-bottom: 1%;
+      color: #ffbd08;;
   }
   .footer-link{
       text-decoration: none;
@@ -359,7 +375,7 @@ text-transform: uppercase;
       margin: 0 5px;
   }
   .copyright{
-    background-color: #290001;
+    background-color: #070000;
     display: flex;
     padding: 1% 4%;
     width: 100%;
@@ -440,10 +456,11 @@ text-transform: uppercase;
       display: flex;
       width: 100%;
       object-fit: cover;
-      margin-bottom: 2%;
+      margin: 2% auto;
+      justify-content: center;
   }
   .gal{
-    width:100%;
+    width:300px;
     height: 200px;
     margin: 2%;
     object-fit: cover;

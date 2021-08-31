@@ -135,6 +135,13 @@ $(".snack-click").click(function(){
     $(".snack").show();
     $(".wedding, .parf, .cup, .birth").hide();
 });
+$('.gal h5, .title-text-h2-2').click(function(){
+    window.location.href='order.html';
+   });
+   $('.cont-contents h4').click(function(){
+    window.location.href='order.html';
+   });
+  
 
 
 

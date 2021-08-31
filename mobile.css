@@ -1,3 +1,8 @@
+@media (max-width: 1150px){
+    .gal{
+        width:250px;
+      }
+}
 @media (max-width: 1000px){
 
     .title-text{
@@ -45,6 +50,11 @@
         font-size: .85rem;
     }
 
+@media (max-width: 900px){
+        .gal{
+            width:180px;
+          }
+    }
 
 @media (max-width: 449px){
     #Nav-section{
@@ -136,8 +146,15 @@
         display: block;
         padding: 4%;
     }
-    .footer-cont div{
-        margin: 7% 0;
+
+    .footer-cont h3{
+        font-size: 1rem;
+    }
+    .footer-cont h4{
+        font-size: .9rem;
+    }
+    .footer-cont p{
+        font-size: .85rem;
     }
     .delivery-div{
         width: 85%;
@@ -193,7 +210,8 @@
     }
     .gal{
         margin-bottom: 100px;
-    }
+        width:300px;
+      }
     .category-cont div:hover{
         font-size: .7rem;
     }
