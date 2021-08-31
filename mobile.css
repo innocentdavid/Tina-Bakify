@@ -245,6 +245,9 @@
     .order-div{
         display: block;
     }
+    .order-cont{
+        padding: 4%;
+    }
     .order-cont p{
         font-size: .9rem;
         padding: 2%;
