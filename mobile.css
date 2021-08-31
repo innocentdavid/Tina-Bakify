@@ -54,6 +54,13 @@
         .gal{
             width:180px;
           }
+          #order-back{
+            padding: 0%;
+        }
+          .order-cont{
+            width: 100%;
+            padding: 2% 4%;
+        }
     }
 
 @media (max-width: 449px){
@@ -234,5 +241,12 @@
     }
     .text-flex-cont{
         margin: 10% 8%;
+    }
+    .order-div{
+        display: block;
+    }
+    .order-cont p{
+        font-size: .9rem;
+        padding: 2%;
     }
 }
