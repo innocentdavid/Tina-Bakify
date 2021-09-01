@@ -100,12 +100,12 @@ $(".close-burger").hide();
 $(".open-burger").click(function(){
     $(".close-burger").show();
     $(".open-burger").hide();
-    $(".nav-list").slideDown();
+    $(".nav-list").show();
 });
 $(".close-burger").click(function(){
     $(".open-burger").show();
     $(".close-burger").hide();
-    $(".nav-list").slideUp();
+    $(".nav-list").hide();
 })
 
 $(".all").click(function(){

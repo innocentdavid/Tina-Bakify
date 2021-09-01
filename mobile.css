@@ -118,11 +118,19 @@
         display: block;
     }
     .div-cont{
-        margin: 5% 0;
+        margin: 0% 0;
     }
     .about-content h2{
         text-align: center;
     }
+    .about-section{
+        width: 100%;
+    
+    }
+    .about-content{
+        width: 95%;
+    }
+    .ab
     .about-content p{
         font-size: .75rem;
         text-align: justify;
