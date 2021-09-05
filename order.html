@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Merriweather+Sans:wght@900&family=Open+Sans&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Merriweather+Sans:wght@900&family=Open+Sans&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/8f4571c692.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tina Bakify</title>
+
+    <style>
+        #loaderGIF {
+            display: none
+        }
+
+        #alert {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(36, 36, 36, 0.172);
+            z-index: 99999999999999999999;
+            display: grid;
+            place-items: center;
+        }
+
+        #alert .alert {
+            width: 300px;
+            height: 180px;
+            background: white;
+            box-shadow: 0px 0px 20px 4px rgb(0 0 0 / 50%);
+            padding: 0 20px;
+            padding-top: 30px;
+        }
+    </style>
+
 </head>
+
 <body id="order">
+    <div id="alert" style="display: none">
+        <div class="alert" style="text-align: center;">
+            <p>Your request has been received ❤.</p>
+            <br>
+            <input class="subscribe" type="button" value="Close" style="border-radius: 3px; padding: 5px 7px;"
+                onclick="$('#alert').hide(); window.location = '/'">
+        </div>
+    </div>
+
     <section class="Title-page">
         <section id="Nav-section">
             <div class="navigation-bar">
@@ -34,186 +75,219 @@
                 <div class="nav-item nav-list">
                     <li><a href="Store.html">Gallery</a></li>
                 </div>
-            </div>  
+            </div>
             <div class="navbrand">
                 <li><a href="index.html">Tina Bakify</a></li>
             </div>
         </section>
         <section id="second-section">
-        <div class="second-section-text">
-            <h3>Love at every bite!</h3>
-        </div>
-        </section> 
-        <section class="cover"></section> 
+            <div class="second-section-text">
+                <h3>Love at every bite!</h3>
+            </div>
+        </section>
+        <section class="cover"></section>
         <section class="welcome">
             <h1>Explore<span>Our Store</span>and get the best</h1>
         </section>
     </section>
-    
- <section id="order-back">
-     <form action="">
-     <div class="order-cont">
-        <div>
-            <h2>Create a Cake!</h2>
-            <p>Describe your own cake and we will create it for you!</p>
-        </div>
-        <hr>
-        <div class="order-div">
-            <div class="label">
-                <label for="name">Your Name <span>*</span></label>
-            </div>
-            <div class="input">
-                <input type="name">
-            </div>
-        </div>
-        <div class="order-div">
-            <div class="label">
-                <label for="email">Your E-mail <span>*</span></label>
-            </div>
-            <div class="input">
-                <input type="email" placeholder="myname@example.com">
-            </div>
-        </div>
-        <div class="order-div">
-            <div class="label">
-                <label for="tel">Your Phone No. <span>*</span></label>
-            </div>
-            <div class="input">
-                <input type="tel" placeholder="+234">
-            </div>
-        </div>
-        <div class="order-div">
-            <div class="label">
-                <label for="Date">Date required <span>*</span></label>
-            </div>
-            <div class="input">
-                <input type="date" placeholder="date">
-            </div>
-        </div>
-        <div class="order-div">
-            <div class="label">
-                <label for="text">Number of steps/layers <span>*</span></label>
-            </div>
-            <div class="input">
-                <input type="number" placeholder="">
-            </div>
-        </div>
-        <div class="order-div">
-            <div class="label">
-                <label for="text">Theme of Cake <span>*</span></label>
-            </div>
-            <div class="input">
-                <input type="text" placeholder="">
-            </div>
-        </div>
-        <div class="order-div">
-            <div class="label">
-                <label for="text">Approx budget <span>*</span></label>
-            </div>
-            <div class="input">
-                <input type="number" placeholder="0.00">
-            </div>
-        </div>
-        <div class="order-div">
-            <div class="label">
-                <label for="text">Delivery Address <span>*</span></label>
-            </div>
-            <div class="input">
-                <input type="address" placeholder="">
-            </div>
-        </div>
 
-        <p>
-            Upload a picture of the style of cake you are after, which will be 
-            included in your message to us.  An image of a cake you have found 
-            on Google or Flickr, or a picture you may have drawn yourself.  
-            The more ideas you are able to show us, the closer we can get to 
-            designing your perfect cake.
-        </p>
-        <div class="order-div">
-            <div class="label">
-                <label for="text">Add Image<span>*</span></label>
+    <section id="order-back">
+        <form id="orderForm" name="orderForm" method="POST" enctype="multipart/form-data" novalidate="novalidate">
+            <div class="order-cont">
+                <div>
+                    <h2>Create a Cake!</h2>
+                    <p>Describe your own cake and we will create it for you!</p>
+                </div>
+                <hr>
+                <div class="order-div">
+                    <div class="label">
+                        <label for="name">Your Name <span>*</span></label>
+                    </div>
+                    <div class="input">
+                        <input type="name" name="name" required>
+                    </div>
+                </div>
+                <div class="order-div">
+                    <div class="label">
+                        <label for="email">Your E-mail <span>*</span></label>
+                    </div>
+                    <div class="input">
+                        <input type="email" name="email" placeholder="myname@example.com" required>
+                    </div>
+                </div>
+                <div class="order-div">
+                    <div class="label">
+                        <label for="tel">Your Phone No. <span>*</span></label>
+                    </div>
+                    <div class="input">
+                        <input type="tel" name="Your_Phone_No" placeholder="+234" required>
+                    </div>
+                </div>
+                <div class="order-div">
+                    <div class="label">
+                        <label for="Date">Date required <span>*</span></label>
+                    </div>
+                    <div class="input">
+                        <input type="date" name="Date_required" placeholder="date" required>
+                    </div>
+                </div>
+                <div class="order-div">
+                    <div class="label">
+                        <label for="Number_of_steps">Number of steps/layers <span>*</span></label>
+                    </div>
+                    <div class="input">
+                        <input type="number" name="Number_of_steps" placeholder="" required>
+                    </div>
+                </div>
+                <div class="order-div">
+                    <div class="label">
+                        <label for="Theme_of_Cake">Theme of Cake <span>*</span></label>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="Theme_of_Cake" placeholder="" required>
+                    </div>
+                </div>
+                <div class="order-div">
+                    <div class="label">
+                        <label for="Approx_budget">Approx budget <span>*</span></label>
+                    </div>
+                    <div class="input">
+                        <input type="number" name="Approx_budget" placeholder="0.00" required>
+                    </div>
+                </div>
+                <div class="order-div">
+                    <div class="label">
+                        <label for="deleveryAddress">Delivery Address <span>*</span></label>
+                    </div>
+                    <div class="input">
+                        <input type="address" name="Delevery_address" placeholder="" required>
+                    </div>
+                </div>
+
+                <p>
+                    Upload pictures of the style of cake you are after, which will be
+                    included in your message to us. An image of a cake you have found
+                    on Google or Flickr, or a picture you may have drawn yourself.
+                    The more ideas you are able to show us, the closer we can get to
+                    designing your perfect cake.
+                </p>
+                <div class="order-div">
+                    <div class="label">
+                        <label for="pictures">Add Image(s) [3 max]<span>*</span></label>
+                    </div>
+                    <div class="input">
+                        <input type="file" name="pictures" multiple placeholder="" required>
+                    </div>
+                </div>
+                <p>
+                    Would you like me to make additional design suggestions based on your theme?
+                </p>
+                <div class="order-div">
+                    <div class="label">
+                        <label for="message">Additional message<span>*</span></label>
+                    </div>
+                    <div class="input">
+                        <textarea name="message" id="" cols="30" rows="10" required></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <input class="form-submit" type="submit" value="Submit">
+                    <img src="Images\kloader.gif" alt="" width=25 height=25 id="loaderGIF"
+                        style="margin-bottom: -8px; margin-left: 5px;">
+                </div>
             </div>
-            <div class="input">
-                <input type="file" placeholder="">
-            </div>
-        </div>
-        <div class="order-div">
-            <div class="label">
-                <label for="text">Add Image<span>*</span></label>
-            </div>
-            <div class="input">
-                <input type="file" placeholder="">
-            </div>
-        </div>
-        <div class="order-div">
-            <div class="label">
-                <label for="text">Add Image<span>*</span></label>
-            </div>
-            <div class="input">
-                <input type="file" placeholder="">
-            </div>
-        </div>
-        <p>
-            Would you like me to make additional design suggestions based on your theme?
-        </p>
-        <div class="order-div">
-            <div class="label">
-                <label for="text">Additional message<span>*</span></label>
-            </div>
-            <div class="input">
-              <textarea name="message" id="" cols="30" rows="10"></textarea>
-            </div>
-        </div>
-        <input class="form-submit" type="submit" value="Submit">
-     </div>
-    </form>
+        </form>
 
 
 
 
- </section>
- <section class="footer-section">
-    <div class="footer-cont">
-        <div>
-            <h3>Working Hours</h3>
-            <div class="working-opened">
-            <h4>Open</h4>
-            <p>Monday to Saturday</p>
-            <p>8am - 6pm</p>
+    </section>
+    <section class="footer-section">
+        <div class="footer-cont">
+            <div>
+                <h3>Working Hours</h3>
+                <div class="working-opened">
+                    <h4>Open</h4>
+                    <p>Monday to Saturday</p>
+                    <p>8am - 6pm</p>
+                </div>
+                <div class="working-closed">
+                    <h4>Closed</h4>
+                    <p>Sunday</p>
+                    <p>8am - 9pm</p>
+                </div>
             </div>
-            <div class="working-closed">
-            <h4>Closed</h4>
-            <p>Sunday</p>
-            <p>8am - 9pm</p>
+            <div>
+                <h3>Locations</h3>
+                <p>
+                    FUNAAB Gate, Alabata, Abeokuta, Ogun State.
+                </p>
+                <p>
+                    Ojoo, Ibadan, Oyo State.
+                </p>
             </div>
         </div>
-        <div>
-            <h3>Locations</h3>
-            <p>
-            FUNAAB Gate, Alabata, Abeokuta, Ogun State.
-            </p>
-            <p>
-            Ojoo, Ibadan, Oyo State.
-            </p>
+    </section>
+    <section class="copyright">
+        <div class="copy-text">
+            <p>©2021 Tina Bakify, Site by <a href="https://www.simonir.com/">Simon I.R.</a>.</p>
         </div>
-    </div>
-</section>
-<section class="copyright">
-    <div class="copy-text"><p>©2021 Tina Bakify, Site by <a href="https://www.simonir.com/">Simon I.R.</a>.</p></div>
-    <div class="social-media">
-        <img src="Images\fb.png" alt="">
-        <a href="https://instagram.com/tina_bakify?utm_medium=copy_link"><img src="Images\Instgram.png" alt=""></a>
-        <a href="http://wa.me/2348135329969"><img src="Images\WhatsApp.png" alt=""></a>
-    </div>
-</section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<script src="index.js"></script>
-<script src="js/wow.min.js"></script>
-            <script>
-            new WOW().init();
-            </script>
+        <div class="social-media">
+            <img src="Images\fb.png" alt="">
+            <a href="https://instagram.com/tina_bakify?utm_medium=copy_link"><img src="Images\Instgram.png" alt=""></a>
+            <a href="http://wa.me/2348135329969"><img src="Images\WhatsApp.png" alt=""></a>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+
+
+    <!-- ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <script type="text/javascript">
+        // form upload
+        $('#orderForm').submit(function (e) {
+            e.preventDefault();
+            $('#loaderGIF').show();
+            $form = $(this)
+            var formData = new FormData(this);
+            $.ajax({
+                // url: 'http://127.0.0.1:8000/tina/',
+                url: 'https://robinsonbackendv2.herokuapp.com/tina/',
+                type: 'POST',
+                data: formData,
+                success: function (res) {
+                    console.log(res)
+                    $('#loaderGIF').hide();
+                    $('#alert').show();
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+        });
+   // end
+    </script>
+
+
 </body>
+
 </html>
